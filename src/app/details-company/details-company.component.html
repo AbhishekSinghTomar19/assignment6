@@ -1,0 +1,15 @@
+<table>
+    <thead>
+        <tr>
+            <th>Employee name</th>
+            <th>Designation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let detail of task ;let i=index">
+            <td><a [routerLink]="'/about/'+i+'/'+detail.Employee+'/'+detail.Designation">{{detail.Employee}}</a></td>
+            <td>{{detail.Designation}}</td>
+        </tr>
+    </tbody>
+</table>
+<button (click)="reloadComp()">Reload</button>

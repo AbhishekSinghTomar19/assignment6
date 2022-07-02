@@ -1,0 +1,7 @@
+<h1>About this employee</h1>
+<div>Employee Name {{this.user.Employee}}</div>
+<div>Designation is {{this.user.Designation}}</div>
+<input [(ngModel)]="newDesignation" #Input placeholder="Edit the designation">
+<button (click)="onEdit(this.user.Id,Input.value)">Edit</button>
+<br><br>
+<button routerLink="/detail">GoBack</button>
